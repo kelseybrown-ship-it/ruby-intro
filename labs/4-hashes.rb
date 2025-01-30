@@ -27,6 +27,9 @@ bitcoin = gets.chomp
 
 # 2. The value will be a string, so you'll want to convert it to a Float.
 bitcoin = bitcoin.to_f
+puts bitcoin
 
 # 3. inspect the bitcoin_data hash
 # puts bitcoin_data
+price = https://api.coindesk.com/v1/bpi/currentprice.json ["price"]
+puts price
