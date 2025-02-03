@@ -15,3 +15,16 @@
 # rand(1..6)
 # Log output to the screen with puts:
 # puts "Hello, world"
+
+rolls = ["roll A", "roll B"]
+index = 0 
+loop do
+ rolls = roll [0]
+    puts "#{rand(1..6)}"
+    if counter == 2
+        break
+    end 
+    index = index + 1
+end 
+
+puts "roll A" + "roll B"
