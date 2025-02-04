@@ -30,3 +30,5 @@ weather_data = {
     { temperature: 60, conditions: "Rainy", precipitation: 0.9 }
   ]
 }
+let current_weather = weather_data["current"]["temperature"]["conditions"]
+puts "#{current weather}"
