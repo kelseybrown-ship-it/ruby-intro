@@ -30,6 +30,44 @@ bitcoin = bitcoin.to_f
 puts bitcoin
 
 # 3. inspect the bitcoin_data hash
-# puts bitcoin_data
-price = https://api.coindesk.com/v1/bpi/currentprice.json ["price"]
-puts price
+{
+  "time": {
+    "updated": "Apr 21, 2022 05:52:00 UTC",
+    "updatedISO": "2022-04-21T05:52:00+00:00",
+    "updateduk": "Apr 21, 2022 at 06:52 BST"
+  },
+  "disclaimer": "This data was produced from the CoinDesk Bitcoin Price Index (USD). Non-USD currency data converted using hourly conversion rate from openexchangerates.org",
+  "chartName": "Bitcoin",
+  "bpi": {
+    "USD": {
+      "code": "USD",
+      "symbol": "&#36;",
+      "rate": "41,463.2367",
+      "description": "United States Dollar",
+      "rate_float": 41463.2367
+    },
+    "GBP": {
+      "code": "GBP",
+      "symbol": "&pound;",
+      "rate": "31,768.9661",
+      "description": "British Pound Sterling",
+      "rate_float": 31768.9661
+    },
+    "EUR": {
+      "code": "EUR",
+      "symbol": "&euro;",
+      "rate": "38,277.4089",
+      "description": "Euro",
+      "rate_float": 38277.4089
+    }
+  }
+}
+
+usd_rate = bitcoin_data["bpi"]["USD"]["rate_float"]
+puts usd_rate
+
+usd_value = usd_rate * bitcoin
+puts usd_value
+
+puts "1 Bitcoin is valued at $#{usd_rate} USD."
+puts "Your Bitcoin is worth $#{usd_value}."
