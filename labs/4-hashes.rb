@@ -62,7 +62,10 @@ puts bitcoin
     }
   }
 }
+puts "what currency would you like"
+bpi = gets.chomp
 
+if bpi == "USD"
 usd_rate = bitcoin_data["bpi"]["USD"]["rate_float"]
 puts usd_rate
 
@@ -71,3 +74,24 @@ puts usd_value
 
 puts "1 Bitcoin is valued at $#{usd_rate} USD."
 puts "Your Bitcoin is worth $#{usd_value}."
+
+elsif bpi == "GBP"
+  gbp_rate = bitcoin_data["bpi"]["GBP"]["rate_float"]
+puts gbp_rate
+
+gbp_value = gbp_rate * bitcoin
+puts gbp_value
+
+puts "1 Bitcoin is valued at $#{gbp_rate} GBP."
+puts "Your Bitcoin is worth $#{gbp_value}."
+
+else bpi == "EUR"
+  eur_rate = bitcoin_data["bpi"]["EUR"]["rate_float"]
+  puts eur_rate
+  
+  eur_value = eur_rate * bitcoin
+  puts eur_value
+  
+  puts "1 Bitcoin is valued at $#{eur_rate} EUR."
+  puts "Your Bitcoin is worth $#{eur_value}."
+end
