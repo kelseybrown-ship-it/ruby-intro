@@ -36,20 +36,20 @@ weather_data = {
 puts "Currently it is #{weather_data[:current][:temperature]} degrees and #{weather_data[:current][:conditions]}."
 
 # Print forecast
-puts "Forecast for the next 7 days:"
-weather_data[:forecast].each do |day, details|
-  temperature = details[:temperature]
-  conditions = details[:conditions]
-  precipitation = details[:precipitation]
+# puts "Forecast for the next 7 days:"
+# weather_data[:forecast].each do |day, details|
+#   temperature = details[:temperature]
+#   conditions = details[:conditions]
+#   precipitation = details[:precipitation]
   
-  forecast_str = " - #{temperature} degrees and #{conditions}"
+#   forecast_str = " - #{temperature} degrees and #{conditions}"
 
-  if conditions != "Rainy" && precipitation > 0.5
-    forecast_str += " with a #{(precipitation * 100).to_i}% chance of rain"
-  end
+#   if conditions != "Rainy" && precipitation > 0.5
+#     forecast_str += " with a #{(precipitation * 100).to_i}% chance of rain"
+#   end
 
-  puts forecast_str
-end
+#   puts forecast_str
+# end
 # # current_temperature = weather_data["temperature"]
 # # puts current_temperature 
 
