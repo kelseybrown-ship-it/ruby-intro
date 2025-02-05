@@ -37,40 +37,40 @@ puts "Currently it is #{weather_data[:current][:temperature]} degrees and #{weat
 
 # Print forecast
 puts "Forecast for the next 7 days:"
-# puts "Day 1 #{weather_data[:forecast][0][:temperature]} degrees and #{weather_data[:forecast][0][:conditions]} chance of rain #{weather_data[:forecast][0][:precipitation]}."
-# puts "Day 2 #{weather_data[:forecast][1][:temperature]} degrees and #{weather_data[:forecast][1][:conditions]} chance of rain #{weather_data[:forecast][1][:precipitation]}."
-# puts "Day 3 #{weather_data[:forecast][2][:temperature]} degrees and #{weather_data[:forecast][2][:conditions]} chance of rain #{weather_data[:forecast][2][:precipitation]}."
-# puts "Day 4 #{weather_data[:forecast][3][:temperature]} degrees and #{weather_data[:forecast][3][:conditions]} chance of rain #{weather_data[:forecast][3][:precipitation]}."
-# puts "Day 5 #{weather_data[:forecast][4][:temperature]} degrees and #{weather_data[:forecast][4][:conditions]} chance of rain #{weather_data[:forecast][4][:precipitation]}."
-# puts "Day 6 #{weather_data[:forecast][5][:temperature]} degrees and #{weather_data[:forecast][5][:conditions]} chance of rain #{weather_data[:forecast][5][:precipitation]}."
-# puts "Day 7 #{weather_data[:forecast][6][:temperature]} degrees and #{weather_data[:forecast][6][:conditions]} chance of rain #{weather_data[:forecast][6][:precipitation]}."
+puts "Day 1 #{weather_data[:forecast][0][:temperature]} degrees and #{weather_data[:forecast][0][:conditions]} chance of rain #{weather_data[:forecast][0][:precipitation]}."
+puts "Day 2 #{weather_data[:forecast][1][:temperature]} degrees and #{weather_data[:forecast][1][:conditions]} chance of rain #{weather_data[:forecast][1][:precipitation]}."
+puts "Day 3 #{weather_data[:forecast][2][:temperature]} degrees and #{weather_data[:forecast][2][:conditions]} chance of rain #{weather_data[:forecast][2][:precipitation]}."
+puts "Day 4 #{weather_data[:forecast][3][:temperature]} degrees and #{weather_data[:forecast][3][:conditions]} chance of rain #{weather_data[:forecast][3][:precipitation]}."
+puts "Day 5 #{weather_data[:forecast][4][:temperature]} degrees and #{weather_data[:forecast][4][:conditions]} chance of rain #{weather_data[:forecast][4][:precipitation]}."
+puts "Day 6 #{weather_data[:forecast][5][:temperature]} degrees and #{weather_data[:forecast][5][:conditions]} chance of rain #{weather_data[:forecast][5][:precipitation]}."
+puts "Day 7 #{weather_data[:forecast][6][:temperature]} degrees and #{weather_data[:forecast][6][:conditions]} chance of rain #{weather_data[:forecast][6][:precipitation]}."
 
-index = 0 
-loop do 
-  weather_output = []
-for temperature in weather_data[:forecast]
-  for conditions in weather_data[:forecast]
-    for precipitation in weather_data[:forecast]
-     puts weather = "#{temperature} degrees and #{conditions} chance of rain #{precipitation}."
-  # temperature = "#{weather_data[:forecast][:temperature]}"
-  # conditions = "#{weather_data[:forecast][:conditions]}" 
-  # precipitation = "#{weather_data[:forecast][:precipitation]}"
-      weather_output.push(weather)
-      index = index + 1
-        if index == 2 
-        break 
-      end 
-    end
-    end 
-  end 
-end 
+# index = 0 
+# loop do 
+#   weather_output = []
+# for temperature in weather_data[:forecast]
+#   for conditions in weather_data[:forecast]
+#     for precipitation in weather_data[:forecast]
+#      puts weather = "#{temperature} degrees and #{conditions} chance of rain #{precipitation}."
+#   # temperature = "#{weather_data[:forecast][:temperature]}"
+#   # conditions = "#{weather_data[:forecast][:conditions]}" 
+#   # precipitation = "#{weather_data[:forecast][:precipitation]}"
+#       weather_output.push(weather)
+#       index = index + 1
+#         if index == 2 
+#         break 
+#       end 
+#     end
+#     end 
+#   end 
+# end 
 
 
 
 # weather = "#{weather_data[:forecast][:temperature]} degrees and #{weather_data[:forecast][:conditions]} chance of rain #{weather_data[:forecast][:precipitation]}."
 # puts weather 
 
-if weather == "Rainy" || weather < 0.5
+if [:conditions] == "Rainy" || [:precipitation] < 0.5.to_s
   puts ""
 else
   puts "#{weather_data[:forecast][:conditions]}" && "#{weather_data[:forecast][0,6][:precipitation]}"
